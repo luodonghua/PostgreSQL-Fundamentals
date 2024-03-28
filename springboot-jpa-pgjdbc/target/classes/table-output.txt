@@ -1,0 +1,11 @@
+mytest=# \d hr.employee
+                                       Table "hr.employee"
+ Column |          Type          | Collation | Nullable |                 Default
+--------+------------------------+-----------+----------+-----------------------------------------
+ id     | integer                |           | not null | nextval('hr.employee_id_seq'::regclass)
+ salary | integer                |           | not null |
+ name   | character varying(255) |           | not null |
+Indexes:
+    "employee_pkey" PRIMARY KEY, btree (id)
+
+    
