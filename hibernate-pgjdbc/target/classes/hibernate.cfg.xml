@@ -13,18 +13,26 @@
         <property name="hibernate.connection.password">hr</property>
  
         <!-- SQL dialect -->
-        <!--  <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property> -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
  
         <!-- Print executed SQL to stdout -->
         <property name="show_sql">true</property>
- 
+
+        <!-- Pretty print the SQL in the log and console -->
+        <property name="format_sql">false</property>        
+        
+        <!-- Generate comments inside the SQL -->
+        <property name="use_sql_comments">false</property>        
+        
         <!-- Drop and recreate database schema object on startup, suitable for testing -->
         <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
         <property name="hibernate.hbm2ddl.auto">create</property>
  
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+
         <!-- Annotated entity classes -->
         <mapping class="com.example.Employee"/>
-        
+
     </session-factory>
 
 </hibernate-configuration>

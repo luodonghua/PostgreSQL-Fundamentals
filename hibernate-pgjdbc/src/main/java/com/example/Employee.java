@@ -1,6 +1,7 @@
 package com.example;
 
 import java.io.Serializable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,6 +26,14 @@ public class Employee implements Serializable {
    
     @Column(name = "salary", nullable = false)
     private Integer Salary;
+
+    public Employee() {
+    }
+
+    public Employee(String Name, Integer Salary) {
+        this.Name = Name;
+        this.Salary = Salary;
+    }
 
     public Integer getID() {
         return ID;

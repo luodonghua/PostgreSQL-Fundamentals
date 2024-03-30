@@ -25,6 +25,11 @@ public class Employee {
         this.Name = Name;
         this.Salary = Salary;
     }
+    public Employee(Integer ID, String Name, Integer Salary) {
+        this.ID = ID;
+        this.Name = Name;
+        this.Salary = Salary;
+    }
 
     public Integer getID() {
         return ID;

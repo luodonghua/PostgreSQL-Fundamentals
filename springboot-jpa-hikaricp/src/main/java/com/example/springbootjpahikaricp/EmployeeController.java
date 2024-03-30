@@ -1,10 +1,12 @@
 package com.example.springbootjpahikaricp;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -72,5 +74,46 @@ public class EmployeeController {
 		response.put("deleted", Boolean.TRUE);
 		return response;
 	}    
+
+
+	// Example to demonstrate JPA Native SQL
+
+    @GetMapping("/findbyemployeenamenative/{name}")
+    public List<Employee> findByyEmployeeNameNativeController(@PathVariable(value = "name") String Name) {
+        
+        List<Employee>  employees = employeeRepository.findByyEmployeeNameNative(Name);
+        return employees;
+    }   	 
+    @GetMapping("/insertemployees")
+    public List<Employee> insertEmployeeNativeController(){
+        List<Employee> initialList = new ArrayList<Employee>();
+		initialList.add(new Employee(1,"Employee-1",3000));
+		initialList.add(new Employee(2, "Employee-2", 4000));
+		initialList.add(new Employee(3, "Employee-3", 5000));
+		initialList.add(new Employee(4, "Employee-4", 6000));
+		initialList.add(new Employee(5, "Employee-5", 7000));
+        initialList.forEach(e -> employeeRepository.insertEmployeeNative(e.getID(),e.getName(),e.getSalary()));
+        return initialList;
+    }   	 
+    @PutMapping("/updateemployeesalarybyidnative/{id}")
+	public String UpdateEmployeeSalaryByIDNativeController(@PathVariable(value = "id") Integer ID,
+	@Valid @RequestBody Integer Salary){
+		int rows = employeeRepository.UpdateEmployeeSalaryByIDNative(Salary,ID);
+		return "Employee with ID " + ID + " updated successfully";
+	}
+
+	// Example to demonstrate JPA JPQL
+    @GetMapping("/findbyemployeenamejpql/{name}")
+    public List<Employee> findByyEmployeeNameJPQLController(@PathVariable(value = "name") String Name) {
+        
+        List<Employee>  employees = employeeRepository.findByyEmployeeNameJPQLOrderByIDDesc(Name);
+        return employees;
+    }   	 
+    @PutMapping("/updateemployeesalarybyidjpql/{id}")
+	public String UpdateEmployeeSalaryByIDJPQLController(@PathVariable(value = "id") Integer ID,
+	@Valid @RequestBody Integer Salary){
+		int rows = employeeRepository.UpdateEmployeeSalaryByIDJPQL(Salary,ID);
+		return "Employee with ID " + ID + " updated successfully";
+	}
 
 }

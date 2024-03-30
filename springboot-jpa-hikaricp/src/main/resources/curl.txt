@@ -1,0 +1,18 @@
+curl http://localhost:8080/api/v1/insertemployees
+
+curl http://localhost:8080/api/v1/employees
+
+
+curl http://localhost:8080/api/v1/findbyemployeenamenative/Employee-2
+
+curl -X PUT http://localhost:8080/api/v1/updateemployeesalarybyidnative/2 \
+   -H "Content-Type: application/json" \
+   -d '10000' 
+
+curl http://localhost:8080/api/v1/findbyemployeenamejpql/Employee-2
+
+curl -X PUT http://localhost:8080/api/v1/updateemployeesalarybyidjpql/2 \
+   -H "Content-Type: application/json" \
+   -d '11000' 
+
+curl http://localhost:8080/api/v1/findbyemployeenamejpql/Employee-2

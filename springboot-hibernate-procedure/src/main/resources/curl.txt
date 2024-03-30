@@ -1,0 +1,8 @@
+curl http://localhost:8080/api/v1/insertemployees
+
+curl http://localhost:8080/api/v1/employees
+
+
+curl http://localhost:8080/api/v1/getsalarybynamenative/Employee-1
+
+curl http://localhost:8080/api/v1/getsalarybynamejpql/Employee-2

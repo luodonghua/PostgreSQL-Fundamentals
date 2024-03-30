@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+ 
+        <!-- Connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/mytest</property>
+        <property name="hibernate.connection.username">hr</property>
+        <property name="hibernate.connection.password">hr</property>
+ 
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+ 
+        <!-- Print executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Pretty print the SQL in the log and console -->
+        <property name="format_sql">false</property>        
+        
+        <!-- Generate comments inside the SQL -->
+        <property name="use_sql_comments">false</property>        
+        
+        <!-- Drop and recreate database schema object on startup, suitable for testing -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+ 
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+
+        <!-- Annotated entity classes -->
+        <mapping class="com.example.springboothibernateprocedure.Employee"/>
+
+    </session-factory>
+
+</hibernate-configuration>
