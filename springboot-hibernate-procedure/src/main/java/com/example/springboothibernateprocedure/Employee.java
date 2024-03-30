@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
+
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
@@ -21,7 +23,7 @@ public class Employee implements Serializable {
     @Column(name = "id")
     private Integer ID;
    
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, length = 30)
     private String Name;
    
     @Column(name = "salary", nullable = false)

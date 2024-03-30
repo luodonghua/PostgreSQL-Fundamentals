@@ -1,0 +1,120 @@
+2024-03-30 19:51:40 FINE org.postgresql.Driver loadDefaultProperties Loading driver configuration via classloader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7
+2024-03-30 19:51:40 FINE org.postgresql.Driver connect Connecting with URL: jdbc:postgresql://localhost/mytest
+2024-03-30 19:51:40 FINE org.postgresql.jdbc.PgConnection <init> PostgreSQL JDBC Driver 42.7.3
+2024-03-30 19:51:40 FINE org.postgresql.jdbc.PgConnection setDefaultFetchSize   setDefaultFetchSize = 0
+2024-03-30 19:51:40 FINE org.postgresql.jdbc.PgConnection setPrepareThreshold   setPrepareThreshold = 5
+2024-03-30 19:51:40 FINE org.postgresql.core.v3.ConnectionFactoryImpl openConnectionImpl Trying to establish a protocol version 3 connection to localhost:5432
+2024-03-30 19:51:40 FINEST org.postgresql.core.Encoding <init> Creating new Encoding UTF-8 with fastASCIINumbers true
+2024-03-30 19:51:40 FINEST org.postgresql.core.Encoding <init> Creating new Encoding UTF-8 with fastASCIINumbers true
+2024-03-30 19:51:40 FINE org.postgresql.core.v3.ConnectionFactoryImpl tryConnect Receive Buffer Size is 408,300
+2024-03-30 19:51:40 FINE org.postgresql.core.v3.ConnectionFactoryImpl tryConnect Send Buffer Size is 146,988
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.ConnectionFactoryImpl enableSSL  FE=> SSLRequest
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.ConnectionFactoryImpl enableSSL  <=BE SSLRefused
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.ConnectionFactoryImpl sendStartupPacket  FE=> StartupPacket(user=hr, database=mytest, client_encoding=UTF8, DateStyle=ISO, TimeZone=Asia/Singapore, extra_float_digits=2)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.ConnectionFactoryImpl doAuthentication  <=BE AuthenticationOk
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(in_hot_standby = off)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(integer_datetimes = on)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(TimeZone = Asia/Singapore)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(IntervalStyle = postgres)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(is_superuser = off)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(application_name = )
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(default_transaction_read_only = off)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(scram_iterations = 4096)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(DateStyle = ISO, MDY)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(standard_conforming_strings = on)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(session_authorization = hr)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(client_encoding = UTF8)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(server_version = 16.2)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(server_encoding = UTF8)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl readStartupMessages  <=BE BackendKeyData(pid=66,741,ckey=-1,833,975,330)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveRFQ  <=BE ReadyForQuery(I)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl execute   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@96532d6, maxRows=0, fetchSize=0, flags=1,047
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendParse  FE=> Parse(stmt=null,query="SET extra_float_digits = 3",oids={})
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendBind  FE=> Bind(stmt=null,portal=null)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendExecute  FE=> Execute(portal=null,limit=1)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendSync  FE=> Sync
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE ParseComplete [null]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE BindComplete [unnamed]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus  <=BE CommandStatus(SET)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveRFQ  <=BE ReadyForQuery(I)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl execute   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@7f690630, maxRows=0, fetchSize=0, flags=1,047
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendParse  FE=> Parse(stmt=null,query="SET application_name = 'PostgreSQL JDBC Driver'",oids={})
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendBind  FE=> Bind(stmt=null,portal=null)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendExecute  FE=> Execute(portal=null,limit=1)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendSync  FE=> Sync
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE ParseComplete [null]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE BindComplete [unnamed]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus  <=BE CommandStatus(SET)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus  <=BE ParameterStatus(application_name = PostgreSQL JDBC Driver)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveRFQ  <=BE ReadyForQuery(I)
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgConnection <init>     types using binary send = OID_ARRAY,UUID,BYTEA,INT8,INT2,INT4,POINT,TIMESTAMP,BOX,TIMESTAMPTZ,NUMERIC,BYTEA_ARRAY,INT2_ARRAY,INT4_ARRAY,TEXT_ARRAY,TIMETZ,VARCHAR_ARRAY,INT8_ARRAY,TIME,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgConnection <init>     types using binary receive = OID_ARRAY,UUID,BYTEA,INT8,INT2,INT4,POINT,TIMESTAMP,BOX,TIMESTAMPTZ,NUMERIC,BYTEA_ARRAY,INT2_ARRAY,INT4_ARRAY,TEXT_ARRAY,TIMETZ,VARCHAR_ARRAY,INT8_ARRAY,DATE,TIME,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgConnection <init>     integer date/time = true
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl execute   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@531be3c5, maxRows=0, fetchSize=0, flags=17
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendParse  FE=> Parse(stmt=null,query="CREATE TABLE emp (id INT primary key, name TEXT, salary smallint)",oids={})
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendBind  FE=> Bind(stmt=null,portal=null)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendDescribePortal  FE=> Describe(portal=null)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendExecute  FE=> Execute(portal=null,limit=0)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendSync  FE=> Sync
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE ParseComplete [null]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE BindComplete [unnamed]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE NoData
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus  <=BE CommandStatus(CREATE TABLE)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveRFQ  <=BE ReadyForQuery(I)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl execute   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@735b478, maxRows=0, fetchSize=0, flags=17
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendParse  FE=> Parse(stmt=null,query="INSERT INTO emp SELECT x,'Employee-'||x,((1+random())/2*10000)::smallint FROM generate_series(1,5) x",oids={})
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendBind  FE=> Bind(stmt=null,portal=null)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendDescribePortal  FE=> Describe(portal=null)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendExecute  FE=> Execute(portal=null,limit=0)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendSync  FE=> Sync
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE ParseComplete [null]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE BindComplete [unnamed]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE NoData
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus  <=BE CommandStatus(INSERT 0 5)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveRFQ  <=BE ReadyForQuery(I)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl execute   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@2c9f9fb0, maxRows=0, fetchSize=0, flags=17
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendParse  FE=> Parse(stmt=null,query="SELECT id, name, salary FROM emp ORDER BY id",oids={})
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendBind  FE=> Bind(stmt=null,portal=null)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendDescribePortal  FE=> Describe(portal=null)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendExecute  FE=> Execute(portal=null,limit=0)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendSync  FE=> Sync
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE ParseComplete [null]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE BindComplete [unnamed]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveFields  <=BE RowDescription(3)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveFields         Field(id,INT4,4,T)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveFields         Field(name,TEXT,65535,T)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveFields         Field(salary,INT2,2,T)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE DataRow(len=15)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE DataRow(len=15)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE DataRow(len=15)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE DataRow(len=15)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE DataRow(len=15)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus  <=BE CommandStatus(SELECT 5)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveRFQ  <=BE ReadyForQuery(I)
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getInt   getInt columnIndex: 1
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getString   getString columnIndex: 2
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getInt   getInt columnIndex: 3
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getInt   getInt columnIndex: 1
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getString   getString columnIndex: 2
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getInt   getInt columnIndex: 3
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getInt   getInt columnIndex: 1
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getString   getString columnIndex: 2
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getInt   getInt columnIndex: 3
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getInt   getInt columnIndex: 1
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getString   getString columnIndex: 2
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getInt   getInt columnIndex: 3
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getInt   getInt columnIndex: 1
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getString   getString columnIndex: 2
+2024-03-30 19:51:40 FINEST org.postgresql.jdbc.PgResultSet getInt   getInt columnIndex: 3
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl execute   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@5056dfcb, maxRows=0, fetchSize=0, flags=17
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendParse  FE=> Parse(stmt=null,query="DROP TABLE emp",oids={})
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendBind  FE=> Bind(stmt=null,portal=null)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendDescribePortal  FE=> Describe(portal=null)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendExecute  FE=> Execute(portal=null,limit=0)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl sendSync  FE=> Sync
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE ParseComplete [null]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE BindComplete [unnamed]
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl processResults  <=BE NoData
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus  <=BE CommandStatus(DROP TABLE)
+2024-03-30 19:51:40 FINEST org.postgresql.core.v3.QueryExecutorImpl receiveRFQ  <=BE ReadyForQuery(I)
+2024-03-30 19:51:40 FINEST org.postgresql.core.QueryExecutorCloseAction close  FE=> Terminate

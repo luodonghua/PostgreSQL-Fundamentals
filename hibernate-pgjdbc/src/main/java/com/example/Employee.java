@@ -21,7 +21,7 @@ public class Employee implements Serializable {
     @Column(name = "id")
     private Integer ID;
    
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, length = 30)
     private String Name;
    
     @Column(name = "salary", nullable = false)

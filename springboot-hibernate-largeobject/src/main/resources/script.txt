@@ -1,0 +1,29 @@
+Without LargeObjectManager.delete(oid), these lo object still there until manual unlink or vacuumlo
+
+mytest=> select * from pg_largeobject_metadata;
+  oid  | lomowner | lomacl
+-------+----------+--------
+ 52835 |    16391 |
+ 52845 |    16391 |
+ 52851 |    16391 |
+(3 rows)
+
+
+donghual@88665a1eeb77 ~ % $PGHOME/bin/vacuumlo  mytest
+
+donghual@88665a1eeb77 ~ % psql -U hr
+Timing is on.
+psql (16.2)
+Type "help" for help.
+
+mytest=> select * from pg_largeobject_metadata;
+ oid | lomowner | lomacl
+-----+----------+--------
+(0 rows)
+
+
+----------------------------------------------------
+
+Hibernate: create table imagejdbcbytea (name varchar(255) not null, data bytea, primary key (name))
+Hibernate: create table imagejdbcblob (name varchar(30) not null, data bytea, primary key (name))
+

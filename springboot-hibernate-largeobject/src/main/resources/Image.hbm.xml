@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.example.springboothibernatelargeobject">
+    <class name="ImageJDBCByteArray" table="imagejdbcbytea">
+        <id name="imageName" column="name"/>
+        <property name="imageData" column="data" type="binary" />
+    </class>
+    <class name="ImageJDBCBlob" table="imagejdbcblob">
+        <id name="imageName" column="name"/>
+        <property name="imageData" column="data" type="binary" />
+    </class>    
+</hibernate-mapping>

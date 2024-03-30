@@ -1,0 +1,64 @@
+package com.example.springboothibernatelargeobject;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+
+public class HibernateLargeObjecBlob {
+    public static void main(String[] args) {
+
+
+        String HibernateConfFile = "hibernate.cfg.xml";
+        ClassLoader classLoader = HibernateLargeObjecBlob.class.getClassLoader();
+        File f = new File(classLoader.getResource(HibernateConfFile).getFile());
+        SessionFactory sessionFactory = new Configuration().configure(f).buildSessionFactory();
+        Session session = sessionFactory.openSession();
+
+        //Save photo into database
+        addImage(session);
+
+        // Read the image and save it to file
+        saveImage(session);
+
+        session.close();
+
+    }
+
+    private static void addImage (Session session) {
+    
+        try(FileInputStream fis = new FileInputStream("target/classes/myimage.png"))
+        {
+            byte[] imageDataBytes = new byte[fis.available()];
+            fis.read(imageDataBytes);
+            ImageJDBCBlob image1 = new ImageJDBCBlob();
+            image1.setImageName("myimage.png");
+            image1.setImageData(imageDataBytes);
+            session.beginTransaction();
+            session.persist(image1);
+            session.getTransaction().commit();
+            System.out.println("Image inserted into database");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static void saveImage(Session session) {
+        
+        ImageJDBCBlob image1 = session.createQuery("FROM ImageJDBCBlob WHERE imageName = :name",ImageJDBCBlob.class)
+        .setParameter("name", "myimage.png").getSingleResult();
+        try(FileOutputStream fos = new FileOutputStream("target/classes/myimage-out.png")) {
+            fos.write(image1.getImageData());
+            System.out.println("Image written to 'target/classes/myimage-out.png'");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+}

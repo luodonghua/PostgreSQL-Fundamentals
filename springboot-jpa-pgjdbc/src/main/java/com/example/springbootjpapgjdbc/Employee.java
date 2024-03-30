@@ -1,6 +1,7 @@
 package com.example.springbootjpapgjdbc;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "employee")
@@ -12,7 +13,7 @@ public class Employee {
     @Column(name = "id")
     private Integer ID;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, length =30)
     private String Name;
 
     @Column(name = "salary", nullable = false)

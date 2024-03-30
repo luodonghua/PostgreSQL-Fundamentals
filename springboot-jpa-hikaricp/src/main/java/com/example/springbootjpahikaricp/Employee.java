@@ -1,6 +1,12 @@
 package com.example.springbootjpahikaricp;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "employee")
@@ -12,7 +18,7 @@ public class Employee {
     @Column(name = "id")
     private Integer ID;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, length =30)
     private String Name;
 
     @Column(name = "salary", nullable = false)

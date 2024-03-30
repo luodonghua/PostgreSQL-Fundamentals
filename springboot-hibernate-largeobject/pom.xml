@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>springboot-hibernate-largeobject</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>springboot-hibernate-largeobject</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	
+		<dependencies>
+
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter</artifactId>
+				<version>3.2.4</version>
+			</dependency>
+	
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<version>3.2.4</version>
+				<scope>test</scope>
+			</dependency>
+	
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-jpa</artifactId>
+				<version>3.2.4</version>
+			</dependency>
+	
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>3.2.4</version>
+			</dependency>
+	
+			<!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
+			<dependency>
+				<groupId>jakarta.validation</groupId>
+				<artifactId>jakarta.validation-api</artifactId>
+				<version>3.0.2</version>
+			</dependency>
+	
+			<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+			<dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>42.7.3</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+			<dependency>
+				<groupId>com.zaxxer</groupId>
+				<artifactId>HikariCP</artifactId>
+				<version>5.1.0</version>
+			</dependency>
+	
+			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>2.0.12</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-simple</artifactId>
+				<version>2.0.12</version>
+				<!-- <scope>test</scope> -->
+				<scope>runtime</scope>
+			</dependency>
+	
+		</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
