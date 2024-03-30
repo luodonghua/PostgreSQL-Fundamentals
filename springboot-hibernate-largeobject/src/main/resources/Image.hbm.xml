@@ -9,7 +9,7 @@
         <property name="imageData" column="data" type="binary" />
     </class>
     <class name="ImageJDBCBlob" table="imagejdbcblob">
-        <id name="imageName" column="name"/>
+        <id name="imageName" column="name" length="30" />
         <property name="imageData" column="data" type="binary" />
     </class>    
 </hibernate-mapping>
