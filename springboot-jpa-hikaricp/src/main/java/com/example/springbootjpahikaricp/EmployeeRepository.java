@@ -33,8 +33,8 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
 
     //Example to demonstrate JPQL
 
-    @Query(value = "SELECT e FROM Employee e WHERE e.Name = :name")
-    List<Employee> findByyEmployeeNameJPQLOrderByIDDesc(@Param("name") String name);
+    @Query(value = "SELECT e FROM Employee e WHERE e.Name = :name order by ID desc")
+    List<Employee> findByEmployeeNameJPQLOrderByIDDesc(@Param("name") String name);
 
     @Modifying
     @Transactional

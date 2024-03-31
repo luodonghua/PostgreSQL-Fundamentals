@@ -13,11 +13,7 @@ import org.hibernate.cfg.Configuration;
 public class HibernateLargeObjecBlob {
     public static void main(String[] args) {
 
-
-        String HibernateConfFile = "hibernate.cfg.xml";
-        ClassLoader classLoader = HibernateLargeObjecBlob.class.getClassLoader();
-        File f = new File(classLoader.getResource(HibernateConfFile).getFile());
-        SessionFactory sessionFactory = new Configuration().configure(f).buildSessionFactory();
+        SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
         Session session = sessionFactory.openSession();
 
         //Save photo into database

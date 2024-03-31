@@ -104,9 +104,9 @@ public class EmployeeController {
 
 	// Example to demonstrate JPA JPQL
     @GetMapping("/findbyemployeenamejpql/{name}")
-    public List<Employee> findByyEmployeeNameJPQLController(@PathVariable(value = "name") String Name) {
+    public List<Employee> findByEmployeeNameJPQLController(@PathVariable(value = "name") String Name) {
         
-        List<Employee>  employees = employeeRepository.findByyEmployeeNameJPQLOrderByIDDesc(Name);
+        List<Employee>  employees = employeeRepository.findByEmployeeNameJPQLOrderByIDDesc(Name);
         return employees;
     }   	 
     @PutMapping("/updateemployeesalarybyidjpql/{id}")

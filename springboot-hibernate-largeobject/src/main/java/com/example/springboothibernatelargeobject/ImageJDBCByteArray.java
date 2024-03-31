@@ -1,8 +1,6 @@
 package com.example.springboothibernatelargeobject;
 
-import java.io.Serializable;
-
-public class ImageJDBCByteArray implements Serializable {
+public class ImageJDBCByteArray {
    private String imageName;
    private byte[] imageData;
    
