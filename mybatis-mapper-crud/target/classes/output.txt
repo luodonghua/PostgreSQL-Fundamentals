@@ -1,0 +1,13 @@
+Records truncated successfully
+Record created successfully: ID: 1 Name: Employee-1 Salary: 3000
+Record created successfully: ID: 2 Name: Employee-2 Salary: 4000
+Reading employee records:
+| 1  | Employee-1 |   3000 |
+| 2  | Employee-2 |   4000 |
+Record updated successfully: ID: 2 Name: Employee-2 Salary: 6000
+Reading employee records:
+| 1  | Employee-1 |   3000 |
+| 2  | Employee-2 |   6000 |
+Record deleted successfully: ID->1
+Reading employee records:
+| 2  | Employee-2 |   6000 |
