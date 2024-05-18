@@ -1,0 +1,98 @@
+curl http://127.0.0.1:8080/addcourse \
+--header "Content-Type: application/json" \
+--request POST \
+--data '{
+    "id": 0,
+    "coursename": "Java Basic",
+    "coursecontents": [
+      {"id":0,"contentname":"Java Core"},
+      {"id":0,"contentname":"Java Swing"}
+      ]       
+}'
+
+curl http://127.0.0.1:8080/addcourse \
+--header "Content-Type: application/json" \
+--request POST \
+  --data '{
+    "id": 0,
+    "coursename": "Java Advanced",
+    "coursecontents": [
+      {"id":1,"contentname":"Java Core"},
+      {"id":0,"contentname":"Java JPA"}
+      ]       
+}'
+
+curl http://127.0.0.1:8080/employees/addemplyees \
+--header "Content-Type: application/json" \
+--request POST \
+  --data '[
+    {
+        "id":0,
+        "employeename": "Larry",
+        "department": "IT",
+        "joiningdate": "1980-01-01",
+        "age": 70,
+        "address": "1047 Round Table Drive",
+        "salary": 80012.50,
+        "leftjob": false
+    },
+    {
+        "id":0,
+        "employeename": "Tom",
+        "department": "Sales",
+        "joiningdate": "2021-09-11",
+        "age": 30,
+        "address": "82 Long Table Road",
+        "salary": 10000,
+        "leftdate":"2024-02-14T08:00:00+08:00",
+        "leftjob": true
+    }
+  ]'
+
+curl -s http://127.0.0.1:8080/employees/allemployees|python3 -m json.tool
+
+curl -G http://127.0.0.1:8080/employees/employeewithname \
+--data employeename=Tom
+
+curl "http://127.0.0.1:8080/employees/employeewithname?employeename=Tom"
+
+
+curl -G http://127.0.0.1:8080/employeebyid --data id=1
+curl "http://127.0.0.1:8080/employeebyid?id=1"
+
+
+curl -G http://127.0.0.1:8080/employees/allemployeesbyids --data ids=1,4
+curl "http://127.0.0.1:8080/employees/allemployeesbyids?ids=1,4"|python3 -m json.tool
+
+curl -s -G http://127.0.0.1:8080/employees/empbydeptandage \
+--data department=IT \
+--data age=80 \
+|python3 -m json.tool
+
+
+curl -s -G http://127.0.0.1:8080/employees/empbyname \
+--data employee=Tom \
+|python3 -m json.tool
+
+curl -G http://127.0.0.1:8080/employees/employeebyidjpql --data id=1
+curl "http://127.0.0.1:8080/employees/employeebyidjpql?id=1"
+
+curl -G http://127.0.0.1:8080/employees/empprefixjpql --data prefix=To
+curl "http://127.0.0.1:8080/employees/empprefixjpql?prefix=To"
+
+curl -G http://127.0.0.1:8080/employees/empprefixnative --data prefix=To
+curl "http://127.0.0.1:8080/employees/empprefixnative?prefix=To"
+
+curl -G http://127.0.0.1:8080/employees/allemployeesbyidsJPQL --data ids=10001,10002
+curl "http://127.0.0.1:8080/employees/allemployeesbyidsJPQL?ids=1,4"|python3 -m json.tool
+
+
+curl -G http://127.0.0.1:8080/employees/nqtotalemployees
+
+curl -G http://127.0.0.1:8080/employees/proctotalemployees
+
+curl -G http://127.0.0.1:8080/employees/nqgetemployeeage --data id=10001
+curl -G "http://127.0.0.1:8080/employees/nqgetemployeeage?id=10001"
+
+curl -G http://127.0.0.1:8080/employees/procgetemployeeage --data id=10001
+curl -G "http://127.0.0.1:8080/employees/procgetemployeeage?id=10001"
