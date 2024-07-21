@@ -1,0 +1,13 @@
+timestamp,message
+1721364737975,"INIT_START Runtime Version: java:17.v27	Runtime Version ARN: arn:aws:lambda:ap-southeast-1::runtime:ad8b53ad076aa1532830fb4ae1dbe3326a7f3901604a0bba1290cd3a625323b8
+"
+1721364738433,"START RequestId: 8ec173e4-9310-5f2a-a7db-2cf7602c1986 Version: $LATEST
+"
+1721364738438,EVENT TYPE: class com.amazonaws.services.lambda.runtime.events.SQSEvent
+1721364740630,Connected to the PostgreSQL server successfully.
+1721364745692,DB server process ID is: 12819
+1721364745693,Close DB connection now ...
+1721364745710,"END RequestId: 8ec173e4-9310-5f2a-a7db-2cf7602c1986
+"
+1721364745710,"REPORT RequestId: 8ec173e4-9310-5f2a-a7db-2cf7602c1986	Duration: 7277.16 ms	Billed Duration: 7278 ms	Memory Size: 512 MB	Max Memory Used: 121 MB	Init Duration: 456.67 ms	
+"

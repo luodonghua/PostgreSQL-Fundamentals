@@ -1,0 +1,39 @@
+timestamp,message
+1721309257412,"INIT_START Runtime Version: java:17.v27	Runtime Version ARN: arn:aws:lambda:ap-southeast-1::runtime:ad8b53ad076aa1532830fb4ae1dbe3326a7f3901604a0bba1290cd3a625323b8
+"
+1721309257878,"START RequestId: 7c402e9a-403b-5fd1-bbf0-71895ab9d2d0 Version: $LATEST
+"
+1721309257884,EVENT TYPE: class com.amazonaws.services.lambda.runtime.events.SQSEvent
+1721309260126,Connected to the PostgreSQL server successfully.
+1721309265188,DB server process ID is: 5401
+1721309265208,"END RequestId: 7c402e9a-403b-5fd1-bbf0-71895ab9d2d0
+"
+1721309265208,"REPORT RequestId: 7c402e9a-403b-5fd1-bbf0-71895ab9d2d0	Duration: 7329.26 ms	Billed Duration: 7330 ms	Memory Size: 512 MB	Max Memory Used: 123 MB	Init Duration: 465.87 ms	
+"
+1721309265679,"START RequestId: af08b377-6269-5e0c-be19-ec6478f91362 Version: $LATEST
+"
+1721309265680,EVENT TYPE: class com.amazonaws.services.lambda.runtime.events.SQSEvent
+1721309265848,Connected to the PostgreSQL server successfully.
+1721309270851,DB server process ID is: 5421
+1721309270853,"END RequestId: af08b377-6269-5e0c-be19-ec6478f91362
+"
+1721309270853,"REPORT RequestId: af08b377-6269-5e0c-be19-ec6478f91362	Duration: 5174.03 ms	Billed Duration: 5175 ms	Memory Size: 512 MB	Max Memory Used: 123 MB	
+"
+1721309290618,"START RequestId: 3e770c10-8737-5c4b-a847-53039d9f7f98 Version: $LATEST
+"
+1721309290618,EVENT TYPE: class com.amazonaws.services.lambda.runtime.events.SQSEvent
+1721309290748,Connected to the PostgreSQL server successfully.
+1721309295753,DB server process ID is: 5437
+1721309295756,"END RequestId: 3e770c10-8737-5c4b-a847-53039d9f7f98
+"
+1721309295756,"REPORT RequestId: 3e770c10-8737-5c4b-a847-53039d9f7f98	Duration: 5138.70 ms	Billed Duration: 5139 ms	Memory Size: 512 MB	Max Memory Used: 124 MB	
+"
+1721309295770,"START RequestId: f08ea936-2f9c-5982-835d-f6253531f3d5 Version: $LATEST
+"
+1721309295771,EVENT TYPE: class com.amazonaws.services.lambda.runtime.events.SQSEvent
+1721309295890,Connected to the PostgreSQL server successfully.
+1721309300893,DB server process ID is: 5458
+1721309300895,"END RequestId: f08ea936-2f9c-5982-835d-f6253531f3d5
+"
+1721309300895,"REPORT RequestId: f08ea936-2f9c-5982-835d-f6253531f3d5	Duration: 5124.69 ms	Billed Duration: 5125 ms	Memory Size: 512 MB	Max Memory Used: 124 MB	
+"
