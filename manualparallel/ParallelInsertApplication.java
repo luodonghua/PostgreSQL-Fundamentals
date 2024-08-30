@@ -81,6 +81,9 @@ public class ParallelInsertApplication implements CommandLineRunner {
 
         @Override
         public void run() {
+            
+            logger.info("Start to Process data range {} to {} by Thread: {}",startId, endId, Thread.currentThread().getId());
+
             try (Connection conn = dataSource.getConnection()) {
                 String insertQuery = "INSERT INTO t_txn(id, c1, c2, update_ts) " +
                         "SELECT i, rpad(i::text, 1000, 'x'), rpad(i::text, 1000, 'y'), " +
