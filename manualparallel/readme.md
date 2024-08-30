@@ -50,8 +50,10 @@ This command will create a new directory named parallel-insert with the basic Ma
 
 7. To build and run the application, you can use the following Maven commands:
 
-`mvn clean install` to build the project
+- `mvn compile` to build the project
+- `mvn exec:java -Dexec.mainClass="com.example.parallelinsert.ParallelInsertApplication" -Dexec.cleanupDaemonThreads=false` to execute parallel-insert
+- `mvn exec:java -Dexec.mainClass="com.example.parallelcopy.ParallelCopyApplication" -Dexec.cleanupDaemonThreads=false` to execute parallel-copy
 
-`mvn spring-boot:run` to run the Spring Boot application
+
 
 Note that you might need to adjust the code and dependencies based on your specific requirements and the versions of the libraries you're using.
