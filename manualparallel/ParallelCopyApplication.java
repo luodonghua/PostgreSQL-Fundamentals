@@ -4,8 +4,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.parallelinsert.ParallelInsertApplication;
-
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -28,7 +26,7 @@ public class ParallelCopyApplication implements CommandLineRunner {
 
 
     private final DataSource dataSource;
-    private static final Logger logger = LoggerFactory.getLogger(ParallelInsertApplication.class);
+    private static final Logger logger = LoggerFactory.getLogger(ParallelCopyApplication.class);
 
 
     public ParallelCopyApplication(DataSource dataSource) {
@@ -89,6 +87,9 @@ public class ParallelCopyApplication implements CommandLineRunner {
 
         @Override
         public void run() {
+
+            logger.info("Start to Process data range {} to {} by Thread: {}", startTimestamp, endTimestamp, Thread.currentThread().getId());
+
             try (Connection conn = dataSource.getConnection()) {
                 String insertQuery = "INSERT INTO t_txn_new (id, c1, c2, update_ts) " +
                         "SELECT id, c1, c2, update_ts " +
