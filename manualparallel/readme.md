@@ -5,7 +5,10 @@ To create a new Maven project with the structure and files similar to the` Paral
 2. Run the following command to generate a new Maven project using the `maven-archetype-quickstart` archetype:
 
 ```bash
-mvn archetype:generate -DgroupId=com.example -DartifactId=parallel-insert -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+mvn archetype:generate -DgroupId=com.example \
+-DartifactId=manual-parallel \
+-DarchetypeArtifactId=maven-archetype-quickstart \
+-DinteractiveMode=false
 ```
 This command will create a new directory named parallel-insert with the basic Maven project structure.
 
