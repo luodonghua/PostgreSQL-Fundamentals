@@ -62,6 +62,7 @@ Note that you might need to adjust the code and dependencies based on your speci
 Sample output
 
 ```java
+...
 2024-08-30T16:32:04.159Z  INFO 8298 --- [demo] [ool-2-thread-19] c.e.p.ParallelInsertApplication          : Inserted 100000 rows in range 11300001 to 11400000 in 33583 ms by Thread: 40
 2024-08-30T16:32:04.159Z  INFO 8298 --- [demo] [ool-2-thread-19] c.e.p.ParallelInsertApplication          : Start to Process data range 14500001 to 14600000 by Thread: 40
 2024-08-30T16:32:04.459Z  INFO 8298 --- [demo] [ool-2-thread-24] c.e.p.ParallelInsertApplication          : Inserted 100000 rows in range 11500001 to 11600000 in 33583 ms by Thread: 45
@@ -92,4 +93,23 @@ Sample output
 2024-08-30T16:32:04.888Z  INFO 8298 --- [demo] [ool-2-thread-28] c.e.p.ParallelInsertApplication          : Start to Process data range 15800001 to 15900000 by Thread: 49
 2024-08-30T16:32:04.940Z  INFO 8298 --- [demo] [ool-2-thread-25] c.e.p.ParallelInsertApplication          : Inserted 100000 rows in range 12100001 to 12200000 in 33927 ms by Thread: 46
 2024-08-30T16:32:04.940Z  INFO 8298 --- [demo] [ool-2-thread-25] c.e.p.ParallelInsertApplication          : Start to Process data range 15900001 to 16000000 by Thread: 46
+....
+2024-08-30T18:59:03.992Z  INFO 8298 --- [demo] [ool-2-thread-25] c.e.p.ParallelInsertApplication          : Inserted 100000 rows in range 999400001 to 999500000 in 18206 ms by Thread: 46
+2024-08-30T18:59:04.011Z  INFO 8298 --- [demo] [ool-2-thread-18] c.e.p.ParallelInsertApplication          : Inserted 100000 rows in range 999500001 to 999600000 in 18095 ms by Thread: 39
+2024-08-30T18:59:04.039Z  INFO 8298 --- [demo] [ool-2-thread-17] c.e.p.ParallelInsertApplication          : Inserted 100000 rows in range 999800001 to 999900000 in 16424 ms by Thread: 38
+2024-08-30T18:59:04.040Z  INFO 8298 --- [demo] [ool-2-thread-32] c.e.p.ParallelInsertApplication          : Inserted 100000 rows in range 999900001 to 1000000000 in 13104 ms by Thread: 53
+2024-08-30T18:59:04.044Z  INFO 8298 --- [demo] [pool-2-thread-1] c.e.p.ParallelInsertApplication          : Inserted 100000 rows in range 999700001 to 999800000 in 16430 ms by Thread: 22
+2024-08-30T18:59:04.044Z  INFO 8298 --- [demo] [ool-2-thread-22] c.e.p.ParallelInsertApplication          : Inserted 100000 rows in range 999600001 to 999700000 in 16601 ms by Thread: 43
+2024-08-30T18:59:04.046Z  INFO 8298 --- [demo] [lication.main()] c.e.p.ParallelInsertApplication          : Total time taken: 02:29:16
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:29 h
+[INFO] Finished at: 2024-08-30T18:59:04Z
+[INFO] ------------------------------------------------------------------------
+2024-08-30T18:59:04.059Z  WARN 8298 --- [demo] [ionShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'org.springframework.data.jpa.util.JpaMetamodelCacheCleanup': java.lang.NoClassDefFoundError: org/springframework/data/jpa/util/JpaMetamodel
+2024-08-30T18:59:04.060Z  INFO 8298 --- [demo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30T18:59:04.062Z  WARN 8298 --- [demo] [ionShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': java.lang.NoClassDefFoundError: org/springframework/orm/hibernate5/SpringBeanContainer$SpringContainedBean
+2024-08-30T18:59:04.063Z  INFO 8298 --- [demo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootJPAHikariCP - Shutdown initiated...
+2024-08-30T18:59:04.081Z  INFO 8298 --- [demo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootJPAHikariCP - Shutdown completed.
 ```
